@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app - Mohamed Essam Ahmed</title>
+
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg glassy">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/favicon.png" width="50" class="me-2" alt="logo">
+                <span>Weather App</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-tornado"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header>
+        <div class="search-container w-75 mx-auto">
+            <div class="d-flex align-items-center mb-3 position-relative">
+                <input type="text" id="LocationInput" class="form-control bg-dark w-100" placeholder="Find your Location ...">
+                <button class="btn btn-primary rounded-pill" id="LocationBtn" type="button" id="button-addon2">Find</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="forecast container glassy">
+        <div class="row" id="forecast">
+
+
+        </div>
+    </section>
+
+    <footer class="bg-dark p-5 mt-5">
+        <div class="container">
+
+            <div class="row align-items-baseline">
+                <div class="col-md-7">
+                    <div class="sub-container w-100 d-flex align-items-center mb-3 position-relative">
+                        <input type="email" class="form-control bg-dark w-100"
+                            placeholder="Enter Your Email to subscribe ...">
+                        <button class="btn btn-primary rounded-pill" type="button" id="button-addon2">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-icons d-flex mb-3">
+                        <a href="https://www.fb.com/m7md.masry"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/mohamed-e-ahmed/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.fb.com/m7md.masry"><i class="fa-brands fa-google"></i></a>
+                        <a href="https://www.fb.com/m7md.masry"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-muted">Copyright 2024 | Designed by <a href="https://www.fb.com/m7md.masry">Masry</a>. All
+                rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+/* Global classes */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition-duration: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(-45deg, #f7ffcd, #c1c2f5);
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #888aff;
+}
+
+
+/* navbar */
+
+.nav-item {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 5px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem #888aff;
+}
+.navbar-toggler > span {
+  color: #888aff;
+}
+
+a.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 15px 0;
+  font-weight: 600;
+  border: 2px solid #ffffff00;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.nav-link:focus,
+.nav-link:hover,
+.nav-link.active {
+  text-shadow: -1px -1px 2px #000000;
+  color: #b9baff;
+  border: 2px solid #888aff;
+  backdrop-filter: blur(7.6px);
+  background: rgba(255, 255, 255, 0.23);
+}
+
+.nav-link::before {
+  content: "\f76c";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  font-size: 18px;
+  transform: translate(100px, -50px);
+  transition-duration: 0.3s;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: -1;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  transform: translate(-15px, -10px);
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  text-shadow: 0px 0px 0px #000000;
+  animation: cloudy 5s infinite 0.4s ease-in-out;
+}
+
+@keyframes cloudy {
+  0% {
+    transform: translate(-15px, -10px) rotate(0deg);
+  }
+  25% {
+    transform: translate(-13px, -12px) rotate(-1deg);
+  }
+  50% {
+    transform: translate(-17px, -8px) rotate(1deg);
+  }
+  75% {
+    transform: translate(-13px, -12px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-15px, -10px) rotate(1deg);
+  }
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar-brand > span {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 3px #9a9be2;
+}
+
+.navbar-brand:hover img {
+  transform: translateX(300%);
+}
+.navbar-brand:hover span {
+  transform: translateX(-30%);
+}
+
+.glassy {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  position: relative;
+  overflow: hidden;
+}
+
+section.forecast.glassy{
+  background: rgba(0, 0, 0, 0.3);
+
+}
+
+.navbar.glassy {
+  border-radius: 0px 0px 50px 50px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* search section */
+
+.search-container {
+  padding: 20px 40px;
+  border-radius: 0px 0px 100px 100px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.search-container button.btn {
+  position: absolute;
+  right: 5px;
+  padding: 10px 40px;
+  background-color: #888aff;
+  border-color: #9b9ce3;
+  font-weight: 600;
+  text-shadow: 0px 0px 2px black;
+}
+
+input.form-control {
+  padding: 15px 20px;
+  border-radius: 50px;
+  border-color: #9b9ce3;
+  color: white;
+}
+
+input.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(155, 156, 227, 0.5);
+  color: white;
+}
+
+.search-container button.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(155, 156, 227, 0.5);
+}
+
+/* forecast section */
+.forecast {
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.card .card-body {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-30%);
+  color: white;
+  text-shadow: 0px 0px 2px black;
+  width: 100%;
+}
+
+.card-img-top {
+  min-height: 465px;
+}
+.card .day-label{
+  position: absolute;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 2;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-transform: capitalize;
+}
+
+.card-body .degree-text {
+  font-size: 70px;
+}
+
+.card sup {
+  line-height: 2;
+}
+
+.deg-info-group {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.deg-info-group i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+p {
+  margin: auto 0px;
+}
+
+
+/* footer section */
+
+.sub-container {
+  width: 80%;
+}
+
+.sub-container button.btn {
+  position: absolute;
+  right: 5px;
+  padding: 10px 40px;
+  background-color: #888aff;
+  border-color: #9b9ce3;
+  font-weight: 600;
+  text-shadow: 0px 0px 2px black;
+}
+
+.sub-container button.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(155, 156, 227, 0.5);
+}
+
+.social-icons a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #888aff;
+  color: white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+footer a:hover {
+  filter: brightness(80%);
+}
+
+button.btn:hover {
+  filter: brightness(80%);
+}
+
+footer div.container p>a:hover {
+  color: #888aff;
+}
+
+
+
+/* Media */
+@media screen and (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 5px 15px;
+  }
+}
+
+
+
+@media screen and (max-width:1200px) {
+  .card-body .degree-text{
+    font-size: 50px;
+  }
+
+  .card .card-body {
+    top:40%;
+  }
+  
+}
+
+@media screen and (max-width: 992px) {
+  .card-body .degree-text{
+    font-size: 40px;
+  }
+
+  .card .card-body {
+    top:35%;
+  }
+
+  .card .day-label{
+    height: 10px;
+    font-size: 12px;
+  }
+
+  .deg-info-group {
+    padding: 2px 20px;
+    font-size: 16px;
+  }
+  .deg-info-group i{
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-body .degree-text{
+    font-size: 70px !important;
+  }
+
+  .card .card-body {
+    top:45%;
+
+  }
+
+  .card .day-label{
+    height: auto;
+    font-size: 18px;
+  }
+
+
+  .deg-info-group {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .deg-info-group i{
+    font-size: 20px;
+  }
+
+  .card.next-days .max-degree>* {
+    font-size: 40px ;
+    margin-bottom: -10px;
+  }
+
+  .card.next-days .min-degree>* {
+
+    font-size: 30px ;
+  }
+  .card.next-days h5 {
+    font-size: 30px ;
+    margin-top: 15px;
+  }
+}
+
+
+
